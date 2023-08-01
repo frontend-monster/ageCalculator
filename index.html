@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-700 min-h-screen overscoll-none text-white grid place-items-center mx-6 md:mx-0 transition-all duration-200">
+    
+    <div class="bg-white shadow-lg p-10 rounded-lg rounded-br-[150px]">
+        <div class="flex gap-3 max-w-2xl">
+            <div class="flex flex-col gap-2">
+                <label for="day" class="text-slate-300 text-xs sm:text-sm transition-all duration-200 font-bold">DAY</label>
+                <input name="day" type="number" id="day" placeholder="DD" class="border-[0.5px] border-slate-300 p-2 sm:p-5 rounded-lg w-full placeholder:font-black md:placeholder:text-xl md:text-xl text-sm transition-all duration-200 font-bold text-slate-500" min="0">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="month" class="text-slate-300 text-xs sm:text-sm transition-all duration-200 font-bold">MONTH</label>
+                <input name="month" type="number" id="month" placeholder="MM" class="border-[0.5px] border-slate-300 p-2 sm:p-5 rounded-lg w-full placeholder:font-black md:placeholder:text-xl md:text-xl text-sm transition-all duration-200 font-bold text-slate-500 appearance-none" min="0">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="year" class="text-slate-300 text-xs sm:text-sm transition-all duration-200 font-bold">YEAR</label>
+                <input name="year" type="number" id="year" placeholder="YYYY" class="border-[0.5px] border-slate-300 p-2 sm:p-5 rounded-lg w-full placeholder:font-black md:placeholder:text-xl md:text-xl text-sm transition-all duration-200 font-bold text-slate-500" min="0">
+            </div>
+        </div>
+        <div class="flex mt-5 items-center">
+            <div class="bg-slate-300 w-full h-[1px]"></div>
+            <div class="bg-slate-100 shadow-md grid place-items-center p-2 rounded-full">
+                <img src="/arrow-down.png" alt="arrow" class="md:w-12 md:h-12 w-6 h-6 object-contain animate-bounce">
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 text-2xl sm:text-4xl md:text-8xl font-black text-black transition-all duration-200">
+            <h1 class="flex gap-10 items-center italic">
+                <span class="text-violet-800 result-year">- -</span>
+                years
+            </h1>
+            <h1 class="flex gap-10 items-center italic">
+                <span class="text-violet-800 result-month">- -</span>
+                months
+            </h1>
+            <h1 class="flex gap-10 items-center italic">
+                <span class="text-violet-800 result-day">- -</span>
+                days
+            </h1>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="age.js"></script>
+</body>
+</html>
